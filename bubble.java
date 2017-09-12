@@ -1,7 +1,7 @@
 package th.ac.utcc.cpe.tanaporn;
 
 public class bubble {
-	private double [] elment;
+	private double [] elment; // 5907101007 นางสาวธนพร รสชื่น
 	private int esize;
 	
 	public bubble( int size ) {
