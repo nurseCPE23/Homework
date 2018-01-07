@@ -1,68 +1,66 @@
-/**
- * @author 5907101007 Tanaporn Roschuen 
- */
-package th.ac.utcc.cpe.tanaporn;
+package Chatchai;
 
-import th.ac.utcc.cpe.tanaporn.test.StackArray;
+/**@Chatchai Chairat 5907101010
+ */
+
+
 
 public class StackSubjectRecord {
-	
-	
-		private int maxSize ;
-		private SubjectRecord []stackArray ;
-		private int top ;
-		
-		public StackSubjectRecord(int maxSize){
-			this.maxSize = maxSize;
-			this.stackArray  = new SubjectRecord[this.maxSize];
-			this.top = -1 ;
-		}
-		public void push(SubjectRecord i){
-			stackArray[++top] = i ;
-		}
-		public SubjectRecord pop(){
-			return stackArray[top--];
-		}
-		public boolean isEmpty(){
-			return(top == -1);
-			
-		}
-		public boolean isFull(){
-			return (top==maxSize-1);
-			
-		}
-		public static void main (String[] args){
-			SubjectRecord sr1 = new SubjectRecord();
-			sr1.setName("Nurse");
-			sr1.setCodeName("NC252");
-			sr1.setUnit(4);
-			sr1.setGrade("a");
-			
-			SubjectRecord sr2 = new SubjectRecord();
-			sr2.setName("Nice");
-			sr2.setCodeName("NC252");
-			sr2.setUnit(5);
-			sr2.setGrade("b");
-			
-			SubjectRecord sr3 = new SubjectRecord();
-			sr3.setName("Nep");
-			sr3.setCodeName("NC252");
-			sr3.setUnit(6);
-			sr3.setGrade("c");
-			
-			StackSubjectRecord stacksubject = new StackSubjectRecord(5);
-			
-			stacksubject.push(sr1);
-			stacksubject.push(sr2);
-			stacksubject.push(sr3);
-			
-			SubjectRecord sr4 = stacksubject.pop();
-			System.out.println (sr4) ;
-			SubjectRecord sr5 = stacksubject.pop();
-			System.out.println (sr5) ;
-			SubjectRecord sr6 = stacksubject.pop();
-			System.out.println (sr6) ;
+	   private int maxSize;        
+	   private SubjectRecord[] stackSub;
+	   private int top;            
+	   public StackSubjectRecord(int maxSize){
+	      this.maxSize = maxSize ;            
+	      stackSub = new SubjectRecord[maxSize];  
+	      top = -1;                
+	      }
+	   public void push(SubjectRecord SubjectRecord){
+	      stackSub[++top] = SubjectRecord;     
+	      }
+	   public SubjectRecord pop(){
+	      return stackSub[top--];  
+	      }
+	   public SubjectRecord peek(){       
+	      return stackSub[top];
+	      }
+	   public boolean isEmpty(){
+	      return (top == -1);
+	      }
+	   public boolean isFull() {
+	      return (top == maxSize-1);
+	      }
 
+ public static void main(String []args){
+	 SubjectRecord s1= new SubjectRecord();
+	 SubjectRecord s2= new SubjectRecord();
+	 SubjectRecord s3= new SubjectRecord();
+	 
+		 s1.setName("Data Structor");
+		 s1.setCodename("NC252");
+		 s1.setGrade("A");
+		 s1.setUnits(3);
+		 
+		 s2.setName("Programming");
+		 s2.setCodename("NC151");
+		 s2.setGrade("B");
+		 s2.setUnits(3);
+		 
+		 s3.setName("Advanced Programming");
+		 s3.setCodename("NC153");
+		 s3.setGrade("C");
+		 s3.setUnits(3);
+	 
+	 StackSubjectRecord stack = new StackSubjectRecord(10);
+	 	stack.push(s1);
+	 	stack.push(s2);
+	 	stack.push(s3);
+	 
+	 SubjectRecord s4 = stack.pop();
+	 	System.out.println(s4);
+	 SubjectRecord s5 = stack.pop();
+	 	System.out.println(s5);
+	 SubjectRecord s6 = stack.pop();
+	 	System.out.println(s6);
+	 
+ }
 }
-	}
-	
