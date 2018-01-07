@@ -1,8 +1,7 @@
-package Chatchai;
+package th.ac.utcc.cpe.tanaporn;
 
-/**@Chatchai Chairat 5907101010
+/**@5907101007 Tanaporn Roschuen
  */
-
 
 public class Link {
 	 public long data;
